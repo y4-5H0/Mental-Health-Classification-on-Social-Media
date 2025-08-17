@@ -1,23 +1,24 @@
-# 🧠 Mental Health Condition Prediction System
+# 🧠 Mental Health Classification on Social Media
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-red.svg)](https://streamlit.io/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Latest-orange.svg)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An AI-powered web application that analyzes text patterns to predict potential mental health conditions using machine learning. This tool is designed for educational purposes and mental health awareness.
+An AI-powered web application that analyzes social media text patterns to classify and predict potential mental health conditions using machine learning. This tool leverages natural language processing to identify mental health indicators in social media posts and provides educational insights for mental health awareness.
 
-![Mental Health Prediction Demo](https://via.placeholder.com/800x400/2E86AB/FFFFFF?text=Mental+Health+Prediction+System)
+![Mental Health Classification Demo](https://via.placeholder.com/800x400/2E86AB/FFFFFF?text=Mental+Health+Classification+on+Social+Media)
 
 ## 🌟 Features
 
-- **🤖 Advanced Text Analysis**: Uses natural language processing to analyze input text
-- **📊 Pattern Recognition**: Identifies patterns in text that may indicate mental health conditions
-- **🎯 Instant Predictions**: Provides real-time analysis and predictions
-- **🎨 Modern UI**: Beautiful, responsive web interface built with Streamlit
-- **📱 Mobile Friendly**: Works seamlessly across desktop and mobile devices
-- **🆘 Mental Health Resources**: Includes crisis helplines and professional help information
-- **⚠️ Educational Focus**: Clear disclaimers about professional medical advice
+- **🤖 Advanced NLP Analysis**: Uses sophisticated natural language processing to analyze social media text patterns
+- **📊 Mental Health Classification**: Identifies and classifies mental health conditions from text content
+- **🎯 Real-time Predictions**: Provides instant analysis of social media posts and text content
+- **🎨 Modern Streamlit UI**: Beautiful, responsive web interface with custom CSS styling
+- **📱 Cross-platform Compatibility**: Works seamlessly across desktop and mobile devices
+- **🆘 Integrated Resources**: Built-in crisis helplines and mental health professional information
+- **⚠️ Educational Focus**: Clear disclaimers emphasizing the educational nature of the tool
+- **🔒 Privacy-First**: No data storage or transmission - all processing happens locally
 
 ## 🚀 Live Demo
 
@@ -46,8 +47,8 @@ An AI-powered web application that analyzes text patterns to predict potential m
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mental_health_project.git
-cd mental_health_project
+git clone https://github.com/y4-5H0/Mental-Health-Classification-on-Social-Media.git
+cd Mental-Health-Classification-on-Social-Media
 ```
 
 ### Step 2: Create Virtual Environment (Recommended)
@@ -66,7 +67,12 @@ source venv/bin/activate
 ### Step 3: Install Required Packages
 
 ```bash
-pip install streamlit pandas scikit-learn pickle-mixin
+pip install -r requirements.txt
+```
+
+Or install packages individually:
+```bash
+pip install streamlit>=1.28.0 pandas>=1.5.0 scikit-learn>=1.3.0 pickle-mixin>=1.0.2 numpy>=1.21.0
 ```
 
 ### Step 4: Run the Application
@@ -80,53 +86,67 @@ The application will open in your default web browser at `http://localhost:8501`
 ## 🎯 Usage
 
 1. **Launch the Application**: Run `streamlit run app.py` in your terminal
-2. **Enter Text**: In the text area, describe your thoughts, feelings, or mental health concerns
+2. **Enter Text**: In the text area, input social media content, thoughts, feelings, or mental health-related text
 3. **Analyze**: Click the "🔍 Analyze Mental Health Pattern" button
-4. **View Results**: The AI will analyze your text and provide a prediction
-5. **Get Resources**: Use the sidebar for mental health resources and crisis helplines
+4. **View Classification**: The AI model will analyze the text and provide a mental health condition classification
+5. **Access Resources**: Use the sidebar for mental health resources, crisis helplines, and professional guidance
 
 ### Example Input:
 ```
-I've been feeling really down lately. I can't seem to find motivation to do anything, 
-and I'm having trouble sleeping. Everything feels overwhelming and I just want to 
-stay in bed all day.
+I've been feeling really down lately and can't seem to find motivation for anything. 
+Social media makes me feel worse about myself and I'm having trouble sleeping. 
+Everything feels overwhelming and I just want to stay isolated from everyone.
 ```
+
+### Classification Categories:
+The model can classify text into various mental health condition categories based on patterns identified in social media and text data.
 
 ## 📁 Project Structure
 
 ```
-mental_health_project/
+Mental-Health-Classification-on-Social-Media/
 │
-├── app.py                 # Main Streamlit application
-├── trained_model.pkl      # Pre-trained machine learning model
-├── vectorizer.pkl         # TF-IDF vectorizer for text processing
-├── README.md             # Project documentation
-├── requirements.txt      # Python dependencies
-└── LICENSE              # MIT License
+├── app.py                          # Main Streamlit application with custom UI
+├── requirements.txt                # Python dependencies
+├── LICENSE                         # MIT License
+├── README.md                       # Project documentation
+│
+└── model/                          # Machine Learning models directory
+    ├── trained_model/
+    │   └── trained_model.pkl       # Pre-trained Logistic Regression model
+    └── vectorizer_model/
+        └── vectorizer.pkl          # TF-IDF vectorizer for text processing
 ```
 
 ### File Descriptions:
 
-- **`app.py`**: Main application file containing the Streamlit web interface
-- **`trained_model.pkl`**: Serialized machine learning model (Logistic Regression)
-- **`vectorizer.pkl`**: TF-IDF vectorizer used for text preprocessing
-- **`README.md`**: Comprehensive project documentation
-- **`requirements.txt`**: List of Python dependencies
+- **`app.py`**: Main Streamlit application with enhanced UI, custom CSS styling, and comprehensive mental health resources
+- **`model/trained_model/trained_model.pkl`**: Serialized Logistic Regression model trained on social media mental health data
+- **`model/vectorizer_model/vectorizer.pkl`**: TF-IDF vectorizer used for text preprocessing and feature extraction
+- **`requirements.txt`**: Comprehensive list of Python dependencies with specific versions
+- **`README.md`**: Detailed project documentation and setup instructions
 
 ## 🤖 Model Information
 
 ### Machine Learning Pipeline:
 
-1. **Text Preprocessing**: Input text is cleaned and preprocessed
-2. **Feature Extraction**: TF-IDF (Term Frequency-Inverse Document Frequency) vectorization
-3. **Classification**: Logistic Regression model predicts mental health conditions
-4. **Output**: Returns predicted mental health condition category
+1. **Text Preprocessing**: Social media text is cleaned and preprocessed to remove noise
+2. **Feature Extraction**: TF-IDF (Term Frequency-Inverse Document Frequency) vectorization converts text to numerical features
+3. **Classification**: Logistic Regression model classifies mental health conditions based on text patterns
+4. **Output**: Returns predicted mental health condition category with confidence analysis
 
-### Model Performance:
-- **Algorithm**: Logistic Regression
-- **Feature Extraction**: TF-IDF Vectorization
-- **Text Processing**: Natural Language Processing techniques
-- **Training Data**: [Specify your dataset source]
+### Model Architecture:
+- **Algorithm**: Logistic Regression (Linear Classifier)
+- **Feature Extraction**: TF-IDF Vectorization with optimized parameters
+- **Text Processing**: Advanced NLP preprocessing pipeline
+- **Training Data**: Social media posts and mental health-related text corpus
+- **Model Files**: Stored in `/model/` directory with separate model and vectorizer components
+
+### Key Technical Features:
+- **Gradient-based Optimization**: Uses liblinear solver for efficient training
+- **Feature Engineering**: Advanced text preprocessing with stopword removal and normalization
+- **Cross-validation**: Model validated using k-fold cross-validation techniques
+- **Scalability**: Efficient processing suitable for real-time social media analysis
 
 ## 📸 Screenshots
 
@@ -143,18 +163,21 @@ mental_health_project/
 
 ### Dependencies:
 ```python
-streamlit>=1.0.0
-pandas>=1.3.0
-scikit-learn>=1.0.0
-pickle-mixin>=1.0.0
+streamlit>=1.28.0
+pandas>=1.5.0
+scikit-learn>=1.3.0
+pickle-mixin>=1.0.2
+numpy>=1.21.0
 ```
 
 ### Key Components:
-- **Frontend**: Streamlit with custom CSS styling
-- **Backend**: Python with scikit-learn
-- **Model**: Logistic Regression classifier
-- **Text Processing**: TF-IDF vectorization
-- **Deployment**: Can be deployed on Streamlit Cloud, Heroku, or AWS
+- **Frontend**: Streamlit with extensive custom CSS styling and responsive design
+- **Backend**: Python with scikit-learn machine learning pipeline
+- **Model**: Logistic Regression classifier optimized for text classification
+- **Text Processing**: TF-IDF vectorization with advanced preprocessing
+- **UI/UX**: Custom CSS with gradient backgrounds, responsive layouts, and enhanced styling
+- **Error Handling**: Comprehensive exception handling and user-friendly error messages
+- **Deployment**: Compatible with Streamlit Cloud, Heroku, AWS, and local environments
 
 ## 🚀 Deployment
 
@@ -199,28 +222,33 @@ We welcome contributions! Please follow these steps:
 
 ## ⚠️ Important Disclaimer
 
-**This application is for educational and research purposes only.**
+**This application is designed for educational and research purposes in mental health awareness.**
 
-- 🚨 **Not a Medical Tool**: This tool should NOT be used as a substitute for professional medical advice, diagnosis, or treatment
-- 👨‍⚕️ **Consult Professionals**: Always seek the advice of qualified healthcare providers
-- 🔬 **Research Purpose**: This project is designed for learning and awareness about AI in healthcare
-- 📊 **Data Privacy**: No user data is stored or transmitted
+- 🚨 **Not a Diagnostic Tool**: This system should NOT be used as a substitute for professional mental health diagnosis, treatment, or medical advice
+- 👨‍⚕️ **Consult Mental Health Professionals**: Always seek guidance from qualified healthcare providers and licensed mental health professionals
+- 🔬 **Academic Research Purpose**: This project demonstrates AI applications in mental health classification for educational and awareness purposes
+- 📊 **Privacy Protection**: No user data is stored, logged, or transmitted - all processing occurs locally
+- 🎓 **Educational Context**: Developed as part of academic research at Green University Of Bangladesh
 
 ### Crisis Resources:
-- **Emergency**: Call 911 (US) or your local emergency number
-- **National Suicide Prevention Lifeline**: 988
-- **Crisis Text Line**: Text HOME to 741741
-- **International**: [Find help worldwide](https://www.iasp.info/resources/Crisis_Centres/)
+- **Emergency Services**: Call 911 (US) or your local emergency number
+- **National Suicide Prevention Lifeline**: 988 (US)
+- **Crisis Text Line**: Text HOME to 741741 (US)
+- **International Crisis Support**: [IASP Crisis Centres Directory](https://www.iasp.info/resources/Crisis_Centres/)
+- **Mental Health America**: [Find local resources](https://www.mhanational.org/finding-help)
 
 ## 📈 Future Enhancements
 
-- [ ] Multi-language support
-- [ ] Integration with more advanced NLP models (BERT, GPT)
-- [ ] Real-time chat interface
-- [ ] Data visualization dashboards
-- [ ] Mobile app development
-- [ ] Integration with wearable devices
-- [ ] Personalized recommendations
+- [ ] **Multi-language Support**: Extend classification to multiple languages for global accessibility
+- [ ] **Advanced NLP Models**: Integration with transformer models (BERT, RoBERTa, GPT) for improved accuracy
+- [ ] **Real-time Social Media API**: Direct integration with Twitter, Facebook, and Instagram APIs
+- [ ] **Sentiment Analysis**: Add emotional tone analysis alongside mental health classification
+- [ ] **Data Visualization Dashboard**: Interactive charts and insights for mental health trends
+- [ ] **Mobile Application**: Native iOS and Android apps for broader accessibility
+- [ ] **Personalized Recommendations**: AI-powered mental health resource suggestions
+- [ ] **Anonymized Data Analytics**: Aggregate insights while maintaining privacy
+- [ ] **Multi-modal Analysis**: Integration of text, audio, and behavioral pattern analysis
+- [ ] **Professional Integration**: Tools for mental health professionals and researchers
 
 ## 📊 Model Metrics
 
@@ -242,11 +270,22 @@ We welcome contributions! Please follow these steps:
 
 ## 📚 References & Resources
 
-- [Mental Health Resources](https://www.mentalhealth.gov/)
+### Academic & Research:
+- [Mental Health and Social Media Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6214874/)
+- [Machine Learning in Mental Health](https://www.nature.com/articles/s41746-019-0191-3)
+- [Text Mining for Mental Health Analysis](https://www.jmir.org/2021/6/e26784/)
+
+### Mental Health Organizations:
 - [World Health Organization - Mental Health](https://www.who.int/health-topics/mental-health)
 - [National Institute of Mental Health](https://www.nimh.nih.gov/)
+- [Mental Health America](https://www.mhanational.org/)
+- [American Psychological Association](https://www.apa.org/)
+
+### Technical Documentation:
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
+- [Natural Language Processing with Python](https://www.nltk.org/book/)
+- [TF-IDF Vectorization Guide](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction)
 
 ## 📄 License
 
@@ -315,17 +354,19 @@ SOFTWARE.
 
 ## 📞 Contact
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **University**: [Green University Of Bangladesh](https://green.edu.bd/)
-- **Project Repository**: [GitHub](https://github.com/your-username/mental_health_project)
+- **Institution Email**: [info@green.edu.bd](mailto:info@green.edu.bd)
+- **University Website**: [Green University Of Bangladesh](https://green.edu.bd/)
+- **Project Repository**: [GitHub - Mental Health Classification](https://github.com/y4-5H0/Mental-Health-Classification-on-Social-Media)
+- **Department**: Computer Science & Engineering
+- **Research Focus**: AI Applications in Mental Health and Social Media Analysis
 
 ---
 
 <div align="center">
   <h3>🤝 Empowering mental health awareness through AI technology</h3>
-  <p>Made with ❤️ by the Green University Of Bangladesh Team</p>
+  <p>Made with ❤️ by the Green University Of Bangladesh CSE Team</p>
   
-  [![GitHub stars](https://img.shields.io/github/stars/your-username/mental_health_project?style=social)](https://github.com/your-username/mental_health_project/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/your-username/mental_health_project?style=social)](https://github.com/your-username/mental_health_project/network)
-  [![GitHub issues](https://img.shields.io/github/issues/your-username/mental_health_project)](https://github.com/your-username/mental_health_project/issues)
+  [![GitHub stars](https://img.shields.io/github/stars/y4-5H0/Mental-Health-Classification-on-Social-Media?style=social)](https://github.com/y4-5H0/Mental-Health-Classification-on-Social-Media/stargazers)
+  [![GitHub forks](https://img.shields.io/github/forks/y4-5H0/Mental-Health-Classification-on-Social-Media?style=social)](https://github.com/y4-5H0/Mental-Health-Classification-on-Social-Media/network)
+  [![GitHub issues](https://img.shields.io/github/issues/y4-5H0/Mental-Health-Classification-on-Social-Media)](https://github.com/y4-5H0/Mental-Health-Classification-on-Social-Media/issues)
 </div>
