@@ -186,8 +186,8 @@ with st.sidebar:
     st.markdown("### 🆘 Mental Health Resources")
     st.markdown("""
     **Crisis Helplines:**
-    - National Suicide Prevention Lifeline: 988
-    - Crisis Text Line: Text HOME to 741741
+    - National Suicide Prevention Lifeline: +880 1779-554391
+    - Crisis Text Line: Text HOME to 09612-119911
     - International Association for Suicide Prevention: [iasp.info](https://www.iasp.info)
     """)
     
