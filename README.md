@@ -254,10 +254,10 @@ We welcome contributions! Please follow these steps:
 
 | Metric | Value |
 |--------|-------|
-| Accuracy | XX.X% |
-| Precision | XX.X% |
-| Recall | XX.X% |
-| F1-Score | XX.X% |
+| Accuracy | 0.7999129535933844 |
+| Precision | 0.80 |
+| Recall | 0.79 |
+| F1-Score | 0.79 |
 
 *Note: Replace with actual model performance metrics*
 
