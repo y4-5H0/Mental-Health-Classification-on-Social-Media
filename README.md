@@ -254,7 +254,7 @@ We welcome contributions! Please follow these steps:
 
 | Metric | Value |
 |--------|-------|
-| Accuracy | 0.7999129535933844 |
+| Accuracy | 0.79 |
 | Precision | 0.80 |
 | Recall | 0.79 |
 | F1-Score | 0.79 |
