@@ -209,7 +209,7 @@ st.markdown(
     <div style='text-align: center; padding: 30px; background: linear-gradient(135deg, #2d3436 0%, #636e72 100%); border-radius: 15px; color: white; margin-top: 50px;'>
         <h3 style='color: #74b9ff; margin-bottom: 15px;'>🎓 Green University Of Bangladesh</h3>
         <p style='font-size: 16px; margin-bottom: 10px;'>Mental Health Prediction System</p>
-        <p style='font-size: 14px; opacity: 0.8;'>Developed by: Jalal Uddin Taj • Bijoy Chandra Das • Sakibul Islam Adil</p>
+        <p style='font-size: 14px; opacity: 0.8;'>Developed by: Manik Biswas • Shovro Nandi • Sudipta Biswas Puja</p>
         <p style='font-size: 12px; opacity: 0.6; margin-top: 15px;'>🤝 Empowering mental health awareness through AI technology</p>
     </div>
     """,
