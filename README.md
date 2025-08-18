@@ -254,10 +254,10 @@ We welcome contributions! Please follow these steps:
 
 | Metric | Value |
 |--------|-------|
-| Accuracy | 0.79 |
-| Precision | 0.80 |
-| Recall | 0.79 |
-| F1-Score | 0.79 |
+| Accuracy | 0.96 |
+| Precision | 0.96 |
+| Recall | 0.97 |
+| F1-Score | 0.96 |
 
 *Note: Replace with actual model performance metrics*
 
@@ -322,7 +322,7 @@ SOFTWARE.
     <td align="center">
       <img src="https://via.placeholder.com/100x100" width="100px;" alt=""/>
       <br />
-      <sub><b>Jalal Uddin Taj</b></sub>
+      <sub><b>Manik Biswas</b></sub>
       <br />
       <a href="#" title="Code">💻</a>
       <a href="#" title="Documentation">📖</a>
@@ -330,7 +330,7 @@ SOFTWARE.
     <td align="center">
       <img src="https://via.placeholder.com/100x100" width="100px;" alt=""/>
       <br />
-      <sub><b>Bijoy Chandra Das</b></sub>
+      <sub><b>Shovro Nandi</b></sub>
       <br />
       <a href="#" title="Code">💻</a>
       <a href="#" title="Research">🔬</a>
@@ -338,7 +338,7 @@ SOFTWARE.
     <td align="center">
       <img src="https://via.placeholder.com/100x100" width="100px;" alt=""/>
       <br />
-      <sub><b>Sakibul Islam Adil</b></sub>
+      <sub><b>Sudipta Biswas Puja</b></sub>
       <br />
       <a href="#" title="Code">💻</a>
       <a href="#" title="Design">🎨</a>
