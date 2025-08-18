@@ -84,8 +84,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Define the paths to the model and vectorizer files
-model_path = 'trained_model.pkl'
-vectorizer_path = 'vectorizer.pkl'
+model_path = 'model/trained_model/trained_model.pkl'
+vectorizer_path = 'model/vectorizer_model/vectorizer.pkl'
 
 # Load the pre-trained model and vectorizer
 try:
